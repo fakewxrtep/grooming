@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>GROOMING</h2>
+            <p>Service for dogs and cats</p>
+        </div>
+        <div class="nav">
+            <a class="nav-button" href="index.html">ГЛАВНАЯ</a>
+            <a class="nav-button" href="">ВХОД</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="text">
+            <h1>Войдите или зарегистрируйтесь</h1>
+            <p>Чтобы получить возможность<br>добавить заявку</p>
+        </div>
+        <form id="reg">
+            <div class="sign">
+                <a class="nav-but" href="#">Вход</a>
+                <a class="nav-but" href="reg.html">Регистрация</a>
+            </div>
+            <div class="order">
+                <input type="email" class="ord" v-bind:value="valueEmail" v-on:input="inputEmail" placeholder="Введите Логин">
+                <input type="password" class="ord" v-bind:value="valuePassword" v-on:input="inputPassword" placeholder="Введите Пароль">
+                <button type="button" class="ord" v-on:click="consoleData">Войти</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="pod">
+        <p class="footer_age">groom-salon.com 2000-2999</p>
+        </div>
+    </div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

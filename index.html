@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>GROOMING</title>
+</head>
+<body>
+    <div id="ogo">
+    <header>
+        <div class="logo">
+            <h2>GROOMING</h2>
+            <p>Service for dogs and cats</p>
+        </div>
+        <div class="nav">
+            <a class="nav-button" href="index.html">ГЛАВНАЯ</a>
+            <a class="nav-button" href="reg.html">ВХОД</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="text">
+            <h1>Профессиональная укладка<br> для ваших домашних<br> питомцев</h1>
+        </div>
+            <div class="order">
+            <h1 class="create">Создайте заявку</h1>
+            <form>
+                        <input type="text" class="inputField" v-bind:value="fieldName"  v-on:input="loginName"  placeholder="Введите кличку питомца">
+                        <input type="text" class="inputField" v-bind:value="fieldService"  v-on:input="loginService"  placeholder="Введите название услуги"><br>
+                        <button class="submit" type="button" v-on:click="submissionForm">Записаться</button>
+                            </div>
+             </form>	
+    </div>
+    <div class="myprojects">
+        <div class="text-project">Наши работы</div>
+            <div class="project">
+                <div class="first" v-for="myjobs in projects">
+                    <img :src="myjobs.img" alt="" class="dogs">
+                <div class="name-project">{{myjobs.nickname}}</div>
+                    <select>
+                    <option><div class="service">Название услуги: <b>{{myjobs.service}}</b></div></option>
+                    </select>
+                    <div class="stage">{{myjobs.stage}}</div>
+            </div>							
+        </div>
+    </div>
+    <div class="footer">
+        <div class="pod">
+        <p class="footer_age">groom-salon.com 2000-2999</p>
+        </div>
+    </div>
+    </div>
+<script src="script.js"></script>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
